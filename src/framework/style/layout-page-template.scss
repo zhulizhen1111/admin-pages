@@ -1,0 +1,16 @@
+.page-content {
+    &.page-table-template {
+        @include flex-container(column, nowrap, flex-start, stretch, stretch);
+        .query-form {
+            @include flex-item(0, 0, 0, auto, auto);
+        }
+        .data-table {
+            @include flex-item(0, 1, 1, auto, auto);
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+        .data-table-pagination {
+            @include flex-item(0, 0, 0, auto, auto);
+        }
+    }
+}

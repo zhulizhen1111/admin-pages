@@ -1,0 +1,108 @@
+$colorWhite: #fff;
+
+$pageHeaderBackground: #2b3643;
+.body {
+    color: #333;
+}
+#app #page-main {
+    .page-header {
+        background: $pageHeaderBackground;
+
+        .page-logo {
+            .menu-toggler.sidebar-toggler {
+                color: $colorWhite;
+            }
+            .logo-text {
+                color: $colorWhite;
+                font-size: 20px;
+            }
+        }
+
+        .data-menu {
+            .data-menu-dropdown {
+                color: $colorWhite;
+            }
+            .el-select .el-input--suffix .el-input__inner {
+                background: #e3e4e6;
+            }
+        }
+        .user-menu {
+            .user-menu-dropdown {
+                color: $colorWhite;
+            }
+        }
+    }
+
+    #page-container {
+        background: #f2f2f2;
+
+        #page-sidebar-wrapper {
+            color: azure;
+            background-color: #364150;
+            .sidebar-menu.el-menu {
+                background: #364150;
+
+                .sidebar-menu-submenu.el-submenu {
+                    &.is-active {
+                        .el-submenu__title {
+                            background: #36c6d3 !important;
+                            color: $colorWhite !important;
+                        }
+                    }
+                    .el-submenu__title {
+                        &:hover {
+                            background: #000;
+                        }
+                    }
+                }
+                .sidebar-menu-item.el-menu-item {
+                    &:hover {
+                        background: #000;
+                    }
+                    &.is-active {
+                        background: #36c6d3 !important;
+                        color: $colorWhite !important;
+                    }
+                }
+            }
+        }
+        .page-content-wrapper {
+            .page-content {
+                .query-form {
+                    border: 1px solid #dfe6ec;
+                    background-color: $colorWhite;
+                }
+                .data-table {
+                    .el-table__header-wrapper {
+                        .el-table__header {
+                            thead tr th {
+                                background-color: #d9d9d9;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page-footer {
+        background: #28303b;
+    }
+}
+
+.el-menu--vertical {
+    .el-menu.el-menu--popup.el-menu--popup-right-start {
+        .el-menu-item.sidebar-menu-item.is-active {
+            background: #36c6d3 !important;
+            color: $colorWhite !important;
+        }
+    }
+}
+
+.sidebar-menu-item.el-menu-item,
+.sidebar-menu-submenu.el-submenu .el-submenu__title {
+    i {
+        color: $colorWhite;
+    }
+}

@@ -1,0 +1,50 @@
+html,
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    #app {
+        width: 100%;
+        height: 100%;
+    }
+}
+#page-main {
+    width: 100%;
+    height: 100%;
+    @include flex-container(column, nowrap, flex-start, stretch, stretch);
+    .page-header {
+        order: 0;
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: $pageHeaderHeight;
+    }
+
+    .page-container {
+        @include flex-item(1, 1, 1, auto, auto);
+        @include flex-container(row, nowrap, flex-start, stretch, stretch);
+
+        .page-sidebar-wrapper {
+            @include flex-item(0, 0, 0, auto, auto);
+            width: $pageSidebarWidth;
+            overflow-y: auto;
+        }
+        .page-content-wrapper {
+            @include flex-item(0, 1, 1, auto, auto);
+        }
+    }
+
+    .page-footer {
+        @include flex-item(2, 0, 0, auto, auto);
+        height: $pageFooterHeight;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    #page-main {
+        .page-footer {
+            display: none;
+        }
+    }
+}

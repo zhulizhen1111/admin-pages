@@ -1,0 +1,21 @@
+// #page-main #page-container #page-content-wrapper .page-content.input-form {
+.page-content.input-form {
+    background: #fff;
+    form {
+        max-width: 800px;
+        margin: 50px auto;
+
+        > .el-form-item {
+            margin-bottom: 18px;
+
+            > .el-form-item__label {
+                width: 180px;
+            }
+
+            > .el-form-item__content {
+                max-width: 600px;
+                margin-left: 180px;
+            }
+        }
+    }
+}

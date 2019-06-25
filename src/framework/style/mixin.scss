@@ -1,0 +1,25 @@
+@mixin flex-container($direction, $wrap, $justifyContent, $alignItems, $alignContent) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    align-content: $alignContent;
+}
+
+@mixin flex-item($order, $grow, $shrink, $basis, $align-self) {
+    order: $order;
+    flex-grow: $grow;
+    flex-shrink: $shrink;
+    flex-basis: $basis;
+    align-self: $align-self;
+}
+
+@mixin flex-inline-container($direction, $wrap, $justifyContent, $alignItems, $alignContent) {
+    display: inline-flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    align-content: $alignContent;
+}

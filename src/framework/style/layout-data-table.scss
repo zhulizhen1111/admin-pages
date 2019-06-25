@@ -1,0 +1,32 @@
+/**
+ * 数据表格的样式
+ */
+#page-main #page-container #page-content-wrapper .page-content .data-table {
+    //position: relative;
+    > .el-table {
+        //position: absolute;
+        .el-table__header-wrapper {
+            .el-table__header {
+                thead tr th {
+                }
+            }
+        }
+        .el-table__body-wrapper {
+            .el-table__body {
+                tr td {
+                    padding: 6px 0;
+                    .cell {
+                        line-height: 20px;
+                        .button-separetor {
+                            width: 1px;
+                            height: 0.9em;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background: #d9d9d9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

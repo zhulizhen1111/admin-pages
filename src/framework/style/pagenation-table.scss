@@ -1,0 +1,12 @@
+.page-content .page-table {
+    @include flex-container(column, nowrap, flex-start, stretch, stretch);
+    .data-table {
+        @include flex-item(0, 1, 1, auto, auto);
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    .data-table-pagination {
+        @include flex-item(0, 0, 0, auto, auto);
+        @include flex-container(row-reverse, nowrap, space-between, stretch, stretch);
+    }
+}

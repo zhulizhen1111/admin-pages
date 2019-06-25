@@ -1,0 +1,89 @@
+#page-main {
+    .page-header {
+        @include flex-container(row, nowrap, flex-start, stretch, stretch);
+        .page-logo {
+            @include flex-item(0, 0, 0, auto, auto);
+            @include flex-inline-container(row, nowrap, space-between, stretch, stretch);
+            width: $pageSidebarWidth;
+            > a {
+                margin-left: 20px;
+                display: inline-block;
+                .logo-default {
+                    margin: 18px 0 0;
+                }
+                .logo-text {
+                    height: $pageHeaderHeight;
+                    line-height: $pageHeaderHeight;
+                }
+            }
+            .menu-toggler.sidebar-toggler {
+                margin: 15.5px 20px 0 5px;
+            }
+        }
+        .data-menu {
+            @include flex-item(0, 0, 1, auto, auto);
+            width: 240px;
+            height: 100%;
+            line-height: $pageHeaderHeight;
+            .data-menu-dropdown {
+                height: 100%;
+                line-height: $pageHeaderHeight;
+                font-size: 18px;
+            }
+            .el-select .el-input--suffix .el-input__inner {
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+        .user-menu {
+            @include flex-item(0, 1, 1, auto, auto);
+            @include flex-inline-container(row-reverse, nowrap, flex-start, stretch, stretch);
+            margin: 0 20px 0 0;
+            padding: 0;
+            height: 100%;
+            .user-menu-dropdown {
+                height: 100%;
+                line-height: $pageHeaderHeight;
+                font-size: 18px;
+                margin-left: 20px;
+            }
+        }
+    }
+    &.page-sidebar-closed {
+        .page-header {
+            .page-logo {
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 20px;
+                > a {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #page-main {
+        .page-header {
+            .page-logo {
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 20px;
+                > a {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #page-main {
+        .page-header {
+            .page-logo {
+                display: none;
+            }
+        }
+    }
+}
